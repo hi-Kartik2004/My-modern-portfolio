@@ -6,7 +6,7 @@ import Topbar from '@/components/Topbar';
 
 export default function Home() {
   return (
-    <main className='flex justify-center mt-7 mb-10'>
+    <main className='flex justify-center mt-5 mb-3'>
       <div className='layout__wrapper flex justify-between max-w-[1310px] w-full px-4 gap-4'>
        <Sidebar />
 

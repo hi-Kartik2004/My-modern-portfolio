@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,200;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,200;1,300&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,100 +16,107 @@
   --border-color: #434343;
 }
 
-.bg-color{
+.bg-color {
   background-color: var(--bg-color);
 }
 
-.section-color{
+.section-color {
   background-color: var(--section-color);
 }
 
-.read__layout{
+.read__layout {
   background: linear-gradient(to left, var(--card-color), var(--section-color));
 }
 
-.card-color{
+.card-color {
   background: linear-gradient(to left, var(--img-bg-color), var(--bg-color));
 }
 
-.white-color{
+.white-color {
   color: var(--white-color);
 }
 
-.paragraph-color{
+.paragraph-color {
   color: var(--paragraph-color);
 }
 
-.image-bg-color{
+.image-bg-color {
   background-color: var(--image-bg-color);
 }
 
-.yellow-color{
-  background-color: var(--yellow-gradient);
+.yellow-color {
+  background: var(--yellow-gradient);
+}
+
+.yellow-text-color {
+  background: var(--yellow-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: var(--bg-color) ;
-  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  font-family: "Poppins", sans-serif;
   color: var(--paragraph-color);
 }
 
-h1{
+h1 {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--white-color);
 }
 
-h2{
+h2 {
   font-size: 2rem;
   font-weight: 600;
   color: var(--white-color);
 }
 
-h3{
+h3 {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--white-color);
 }
 
-h4{
+h4 {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--white-color);
 }
 
-p{
+p {
   font-size: 1rem;
   font-weight: 400;
   color: var(--paragraph-color);
 }
 
-a{
+a {
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--paragraph-color);
 }
 
-.border{
+.border {
   border: 1px solid var(--border-color);
 }
 
-a:hover{
+a:hover {
   color: var(--white-color);
   transition: all 0.2s ease-in-out;
 }
 
-span{
+span {
   font-size: 1rem;
 }
 
-section{
+section {
   display: flex;
   justify-content: center;
 }
 
-.container{
+.container {
   max-width: 1200px;
   width: 100%;
 }
@@ -122,12 +129,12 @@ section{
   color: transparent;
 }
 
-.logo{
+.logo {
   font-size: 2.5rem;
   /* color: transparent; */
 }
 
-.navlink{
+.navlink {
   font-size: 1.75rem;
   display: flex;
   justify-content: center;
@@ -137,17 +144,17 @@ section{
   border: 1px solid var(--border-color);
 }
 
-
-.navlink:hover{
+.navlink:hover {
   background-color: var(--bg-color);
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: #000;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.testmonial-logo{
+.testmonial-logo {
   background-color: var(--image-bg-color);
   font-size: 2.5rem;
   padding: 1rem;
@@ -155,7 +162,7 @@ section{
   justify-content: center;
 }
 
-.divider{
+.divider {
   width: 100px;
   height: 5px;
   background: var(--yellow-gradient);
@@ -163,37 +170,79 @@ section{
   /* margin: 0.75rem 0rem; */
 }
 
-.internal-link{
+.section__heading__wrapper {
+  position: relative;
+}
+
+.section__heading__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 3.5rem; /* Adjust the position of the line relative to the parent element */
+  left: 30px; /* Adjust the distance from the left side of the parent element */
+  width: 2px;
+  height: calc(100% + 1rem);
+  background-color: var(
+    --border-color
+  ); /* Use background-color instead of color */
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.resume__section .timeline__ele:first-child {
+  margin-top: 1rem !important;
+}
+
+.testimonial:not(:last-child){
+  margin-right: 3rem;
+}
+
+.timeline__ele {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.timeline__ele:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: var(--border-color);
+  height: calc(100% + 4rem);
+}
+
+.internal-link {
   font-size: 1rem;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-::-webkit-scrollbar-track{
-  background: var(--section-color);
+::-webkit-scrollbar-track {
+  background: var(--card-color);
 }
 
-::-webkit-scrollbar-track:horizontal{
+::-webkit-scrollbar-track:horizontal {
   background: var(--section-color);
   border: 1px solid var(--border-color);
   border-radius: 20px;
 }
 
-::-webkit-scrollbar-thumb:horizontal{
+::-webkit-scrollbar-thumb:horizontal {
   background: var(--yellow-gradient);
   border: 1px solid var(--border-color);
 }
 
-
-::-webkit-scrollbar-thumb{
-  background: var(--card-color);
+::-webkit-scrollbar-thumb {
+  background: var(--image-bg-color);
   border-radius: 20px;
   border: 1px solid var(--border-color);
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background: var(--yellow-gradient);
 }

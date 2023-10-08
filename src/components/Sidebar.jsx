@@ -1,5 +1,7 @@
 import { SiHtml5 } from "react-icons/si";
 import Social from "./Social";
+import { Bs0Circle, BsDiscord, BsGithub, BsLinkedin, BsMailbox } from "react-icons/bs";
+import Link from "next/link";
 
 const Sidebar = () => {
   return <div className="left max-w-[250px] w-full section-color flex flex-col px-5 py-5 rounded-xl border">
@@ -27,7 +29,13 @@ const Sidebar = () => {
       <Social />
       <Social />
       <Social />
-      <Social />
+      <div className="flex w-full justify-center">
+        <div className="flex gap-5">
+          <a href="/" target="_blank"><BsLinkedin size={20}/></a>
+          <a href="/" target="_blank"><BsGithub size={20}/></a>
+          <a href="/" target="_blank"><BsDiscord size={20}/></a>
+        </div>
+      </div>
     </div>
 
 

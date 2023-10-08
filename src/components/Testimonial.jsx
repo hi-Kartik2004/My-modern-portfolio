@@ -3,7 +3,7 @@ import { BsPersonFillDown } from "react-icons/bs";
 
 const Testimonial = () => {
   return (
-    <div className="doing-ele mt-[2.5rem] flex mr-12 min-w-[400px] w-full px-4 py-4 card-color border rounded-xl relative">
+    <div className="testimonial mt-[2.5rem] flex min-w-[400px] w-full px-4 py-4 card-color border rounded-xl relative">
       <div className="testmonial-logo absolute -top-[40px] left-2 rounded-xl">
         {/* <h1 className="gradient">Lorem.</h1> */}
         <BsPersonFillDown className="" />
