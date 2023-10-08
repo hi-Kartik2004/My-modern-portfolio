@@ -2,7 +2,7 @@ import { SiHtml5 } from "react-icons/si";
 import Social from "./Social";
 
 const Sidebar = () => {
-  return <div className="left max-w-[250px] w-full section-color flex flex-col p-5 rounded-xl border">
+  return <div className="left max-w-[250px] w-full section-color flex flex-col px-5 py-5 rounded-xl border">
     <div className="flex flex-col items-center ">
       <img src="https://avatars.githubusercontent.com/u/111000515?v=4" alt="picture" className="w-[150px] h-[150px] rounded-xl shadow-md shadow-black" />
     </div>

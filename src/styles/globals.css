@@ -12,6 +12,7 @@
   --paragraph-color: #d6d6d6;
   --image-bg-color: #2b2b2cc7;
   --yellow-color: #ffdb70;
+  --yellow-gradient: linear-gradient(to right, #ffdb70, #f5a623);
   --border-color: #434343;
 }
 
@@ -44,7 +45,7 @@
 }
 
 .yellow-color{
-  background-color: var(--yellow-color);
+  background-color: var(--yellow-gradient);
 }
 
 body {
@@ -113,9 +114,17 @@ section{
   width: 100%;
 }
 
+.gradient {
+  font-size: 2.5rem;
+  background: var(--yellow-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .logo{
   font-size: 2.5rem;
-  color: var(--yellow-color);
+  /* color: transparent; */
 }
 
 .navlink{
@@ -149,7 +158,7 @@ section{
 .divider{
   width: 100px;
   height: 5px;
-  background-color: var(--yellow-color);
+  background: var(--yellow-gradient);
   border-radius: 20px;
   /* margin: 0.75rem 0rem; */
 }
@@ -167,9 +176,17 @@ section{
   background: var(--section-color);
 }
 
-::-webkit-scrollbar-thumb:horizontal{
-  background-color: var(--yellow-color);
+::-webkit-scrollbar-track:horizontal{
+  background: var(--section-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
 }
+
+::-webkit-scrollbar-thumb:horizontal{
+  background: var(--yellow-gradient);
+  border: 1px solid var(--border-color);
+}
+
 
 ::-webkit-scrollbar-thumb{
   background: var(--card-color);
@@ -178,5 +195,5 @@ section{
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background: var(--yellow-color);
+  background: var(--yellow-gradient);
 }
